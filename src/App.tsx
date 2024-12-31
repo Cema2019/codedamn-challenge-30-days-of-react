@@ -8,7 +8,7 @@ import {
 import { CssBaseline, Container, Typography } from "@mui/material";
 import Navigation from "../components/Navigation";
 import Tabs from "../components/Tabs"; // Homepage Component
-import TemperatureConverter from "./components/TemperatureConverter";
+import TemperatureConverter from "../components/TemperatureConverter";
 import RandomNamePicker from "./components/RandomNamePicker";
 
 const App: React.FC = () => {

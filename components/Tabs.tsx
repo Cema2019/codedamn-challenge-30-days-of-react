@@ -51,7 +51,7 @@ const TabContent = ({ activeTab }: { activeTab: string }) => {
 const TabsComponent = () => {
   const [activeTab, setActiveTab] = useState<string>("person");
 
-  const handleTabChange = (event: React.SyntheticEvent, newTab: string) => {
+  const handleTabChange = (_: React.SyntheticEvent, newTab: string) => {
     setActiveTab(newTab);
   };
 

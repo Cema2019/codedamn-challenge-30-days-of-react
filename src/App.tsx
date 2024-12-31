@@ -10,7 +10,6 @@ import Navigation from "./components/Navigation";
 import Tabs from "./components/Tabs"; // Homepage Component
 import TemperatureConverter from "./components/TemperatureConverter";
 import RandomNamePicker from "./components/RandomNamePicker";
-import EMI from "./components/EMI";
 
 const App: React.FC = () => {
   return (

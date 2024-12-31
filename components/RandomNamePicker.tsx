@@ -1,15 +1,16 @@
 import React, { useState, useRef } from 'react';
+import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle, Box } from '@mui/material';
 
-const RandomNamePicker = () => {
-  const [nameList, setNameList] = useState([]);
-  const [pickedNames, setPickedNames] = useState([]);
-  const [currentName, setCurrentName] = useState('');
-  const [showDialog, setShowDialog] = useState(false);
-  const pickedNameRef = useRef('');
+const RandomNamePicker: React.FC = () => {
+  const [nameList, setNameList] = useState<string[]>([]);
+  const [pickedNames, setPickedNames] = useState<string[]>([]);
+  const [currentName, setCurrentName] = useState<string>('');
+  const [showDialog, setShowDialog] = useState<boolean>(false);
+  const pickedNameRef = useRef<string>('');
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter' && currentName.trim() !== '') {
-      setNameList([...nameList, currentName]);
+      setNameList((prev) => [...prev, currentName]);
       setCurrentName('');
     }
   };
@@ -19,37 +20,46 @@ const RandomNamePicker = () => {
       const index = Math.floor(Math.random() * nameList.length);
       const name = nameList[index];
       pickedNameRef.current = name; // Store the picked name in a ref to access it later
-      setPickedNames([...pickedNames, name]);
-      setNameList(nameList.filter((_, i) => i !== index));
+      setPickedNames((prev) => [...prev, name]);
+      setNameList((prev) => prev.filter((_, i) => i !== index));
       setShowDialog(true); // Open the dialog
     }
   };
 
   return (
-    <div>
-      <input
+    <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+      <TextField
         id="nameInput"
-        type="text"
+        label="Enter Name"
+        variant="outlined"
         value={currentName}
         onChange={(e) => setCurrentName(e.target.value)}
         onKeyDown={handleKeyPress}
+        fullWidth
       />
-      <div id="nameList">
+      <Box id="nameList">
         {nameList.map((name, index) => (
           <span key={index} className="name">{name}</span>
         ))}
-      </div>
-      <button id="pick" onClick={pickName}>Pick a Name</button>
-      <div id="pickedList">
+      </Box>
+      <Button variant="contained" color="primary" onClick={pickName}>Pick a Name</Button>
+      <Box id="pickedList">
         {pickedNames.map((name, index) => (
           <span key={index} className="name">{name}</span>
         ))}
-      </div>
-      <dialog open={showDialog} id="nameDialog">
-        <p>{pickedNameRef.current}</p>
-        <button onClick={() => setShowDialog(false)}>Close</button>
-      </dialog>
-    </div>
+      </Box>
+      
+      {/* Dialog for showing the picked name */}
+      <Dialog open={showDialog} onClose={() => setShowDialog(false)}>
+        <DialogTitle>Picked Name</DialogTitle>
+        <DialogContent>
+          <p>{pickedNameRef.current}</p>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setShowDialog(false)} color="primary">Close</Button>
+        </DialogActions>
+      </Dialog>
+    </Box>
   );
 };
 

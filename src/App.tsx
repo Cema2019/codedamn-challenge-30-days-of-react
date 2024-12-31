@@ -9,7 +9,7 @@ import { CssBaseline, Container, Typography } from "@mui/material";
 import Navigation from "../components/Navigation";
 import Tabs from "../components/Tabs"; // Homepage Component
 import TemperatureConverter from "../components/TemperatureConverter";
-import RandomNamePicker from "./components/RandomNamePicker";
+import RandomNamePicker from "../components/RandomNamePicker";
 
 const App: React.FC = () => {
   return (
@@ -28,7 +28,6 @@ const App: React.FC = () => {
           <Route path="/" element={<Tabs />} /> {/* Homepage */}
           <Route path="/temperature" element={<TemperatureConverter />} />
           <Route path="/name-picker" element={<RandomNamePicker />} />
-          <Route path="/emi" element={<EMI />} />
           {/* Redirect for unmatched routes */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

@@ -9,13 +9,13 @@ const Navigation: React.FC = () => {
         Home
       </Button>
       <Button variant="contained" component={Link} to="/tabs">
-        Tabs
+        Day 1
       </Button>
       <Button variant="contained" component={Link} to="/temperature">
-        Temperature Converter
+        Day 2
       </Button>
       <Button variant="contained" component={Link} to="/name-picker">
-        Name Picker
+        Day 3
       </Button>
     </Box>
   );

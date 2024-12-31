@@ -14,9 +14,6 @@ const Navigation: React.FC = () => {
       <Button variant="contained" component={Link} to="/name-picker">
         Name Picker
       </Button>
-      <Button variant="contained" component={Link} to="/emi">
-        EMI Calculator
-      </Button>
     </Box>
   );
 };

@@ -1,0 +1,47 @@
+[33mcommit 49b592e0f2a18d32666dd4492e3e6f710360eb34[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:47:29 2024 -0600
+
+    feat(random-picker): create RandomPicker component
+
+[33mcommit cc14d8b92df5326279e24898aa8ee27f603f902c[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:43:29 2024 -0600
+
+    feat: create temparatureconverter file
+
+[33mcommit c9785fb00c91cb747b1153404ef6f1b86d94adcd[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:41:04 2024 -0600
+
+    feat: create Tabs file
+
+[33mcommit 389163163a6a50f100fe51da1f591264fde8f305[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:39:44 2024 -0600
+
+    feat: create Navigation file
+
+[33mcommit 530bd5eca2cbfda867fd299a1c750bd51cea1630[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:38:26 2024 -0600
+
+    feat: replace favicon
+
+[33mcommit 9db936533e57a7d5e6701732b4eaf65de92d5df1[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:29:30 2024 -0600
+
+    feat: install react-router-dom
+
+[33mcommit 5f8f47d1ac4652355a877c62c493f8a0e5de08d3[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:27:55 2024 -0600
+
+    chore: install mui library
+
+[33mcommit e63ec5043ad7bb29c95772892746cc052209b975[m
+Author: Carlos M <53409854+Cema2019@users.noreply.github.com>
+Date:   Mon Dec 30 19:24:55 2024 -0600
+
+    initial commit

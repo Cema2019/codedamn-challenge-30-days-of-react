@@ -1,5 +1,6 @@
 // HomePage.tsx
 import { Typography, Stack, Link } from "@mui/material";
+import React from "react";
 
 const HomePage = () => {
   return (

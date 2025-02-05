@@ -11,6 +11,6 @@ export const routeConfig = [
   { path: "/tabs", element: <Tabs />, label: "Day 1"  },
   { path: "/temperature", element: <TemperatureConverter />, label: "Day 2"  },
   { path: "/name-picker", element: <RandomNamePicker />, label: "Day 3"  },
-  { path: "/name-picker", element: <LoanCalculator />, label: "Day 4"  },
+  { path: "/loan-calculator", element: <LoanCalculator />, label: "Day 4"  },
 ];
 

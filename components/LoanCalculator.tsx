@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Card,
@@ -8,7 +8,6 @@ import {
   Typography,
   Alert,
 } from '@mui/material';
-import React from 'react';
 
 const LoanCalculator: React.FC = () => {
   const [cost, setCost] = useState<string>('');

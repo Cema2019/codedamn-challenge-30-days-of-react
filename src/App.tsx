@@ -7,10 +7,7 @@ import {
 } from "react-router-dom";
 import { CssBaseline, Container, Typography } from "@mui/material";
 import Navigation from "../components/Navigation";
-import HomePage from "../components/HomePage"; 
-import Tabs from "../components/Tabs"; 
-import TemperatureConverter from "../components/TemperatureConverter";
-import RandomNamePicker from "../components/RandomNamePicker";
+import { routeConfig } from "../routes/routeConfig";
 
 const App: React.FC = () => {
   return (
@@ -24,11 +21,9 @@ const App: React.FC = () => {
         <Navigation />
 
         <Routes>
-          <Route path="/" element={<HomePage />} /> 
-          <Route path="/tabs" element={<Tabs />} />
-          <Route path="/temperature" element={<TemperatureConverter />} />
-          <Route path="/name-picker" element={<RandomNamePicker />} />
-
+          {routeConfig.map(({ path, element }, index) => (
+            <Route key={index} path={path} element={element} />
+          ))}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Container>

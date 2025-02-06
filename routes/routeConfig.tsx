@@ -8,6 +8,7 @@ import ReactCounterBug from "../components/ReactCounterBug";
 import SimplePagination from "../components/SimplePagination";
 import MultiplicationTable from "../components/MultiplicationTable";
 import HoverCounter from "../components/HoverCounter";
+import ToggleSwitch from "../components/ToggleSwitch";
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },
@@ -19,5 +20,6 @@ export const routeConfig = [
   { path: "/simple-pagination", element: <SimplePagination />, label: "Day 6"  },
   { path: "/multiplication-table", element: <MultiplicationTable />, label: "Day 7"  },
   { path: "/hover-counter", element: <HoverCounter />, label: "Day 8"  },
+  { path: "/toggle-switch", element: <ToggleSwitch />, label: "Day 9"  },
 ];
 

@@ -11,15 +11,17 @@ const SimplePagination: React.FC = () => {
   const [data, setData] = useState<Post[]>([]);
   const [page, setPage] = useState<number>(1);
 
+useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`);
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`
+    );
     const newData: Post[] = await response.json();
     setData(newData);
   };
 
-  useEffect(() => {
-    fetchData();
-  }, [page]);
+  fetchData();
+}, [page]);
 
   const handleNextClick = () => {
     setPage((prevPage) => prevPage + 1);

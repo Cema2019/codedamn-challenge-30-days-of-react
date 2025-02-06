@@ -14,7 +14,7 @@ const SimplePagination: React.FC = () => {
   const fetchData = async () => {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`);
     const newData: Post[] = await response.json();
-    setData((prevData) => [...prevData, ...newData]);
+    setData(newData);
   };
 
   useEffect(() => {

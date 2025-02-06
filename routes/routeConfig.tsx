@@ -1,4 +1,4 @@
-import React from "react";
+
 import HomePage from "../components/HomePage";
 import Tabs from "../components/Tabs";
 import TemperatureConverter from "../components/TemperatureConverter";
@@ -7,8 +7,6 @@ import LoanCalculator from "../components/LoanCalculator";
 import ReactCounterBug from "../components/ReactCounterBug";
 import SimplePagination from "../components/SimplePagination";
 import MultiplicationTable from "../components/MultiplicationTable";
-
-
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },

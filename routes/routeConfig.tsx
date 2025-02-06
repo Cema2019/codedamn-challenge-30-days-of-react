@@ -6,6 +6,8 @@ import RandomNamePicker from "../components/RandomNamePicker";
 import LoanCalculator from "../components/LoanCalculator";
 import ReactCounterBug from "../components/ReactCounterBug";
 import SimplePagination from "../components/SimplePagination";
+import MultiplicationTable from "../components/MultiplicationTable";
+
 
 
 export const routeConfig = [
@@ -16,5 +18,6 @@ export const routeConfig = [
   { path: "/loan-calculator", element: <LoanCalculator />, label: "Day 4"  },
   { path: "/react-counter-bug", element: <ReactCounterBug />, label: "Day 5"  },
   { path: "/simple-pagination", element: <SimplePagination />, label: "Day 6"  },
+  { path: "/multiplication-table", element: <MultiplicationTable />, label: "Day 7"  },
 ];
 

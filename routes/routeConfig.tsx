@@ -7,6 +7,7 @@ import LoanCalculator from "../components/LoanCalculator";
 import ReactCounterBug from "../components/ReactCounterBug";
 import SimplePagination from "../components/SimplePagination";
 import MultiplicationTable from "../components/MultiplicationTable";
+import HoverCounter from "../components/HoverCounter";
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },
@@ -17,5 +18,6 @@ export const routeConfig = [
   { path: "/react-counter-bug", element: <ReactCounterBug />, label: "Day 5"  },
   { path: "/simple-pagination", element: <SimplePagination />, label: "Day 6"  },
   { path: "/multiplication-table", element: <MultiplicationTable />, label: "Day 7"  },
+  { path: "/hover-counter", element: <HoverCounter />, label: "Day 8"  },
 ];
 

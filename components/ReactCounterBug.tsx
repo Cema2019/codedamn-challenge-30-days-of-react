@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Card, Typography } from "@mui/material";
 
 export default function ReactCounterBug(): JSX.Element {

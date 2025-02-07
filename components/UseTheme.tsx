@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container } from '@mui/material';
 
-export const useTheme = () => {
+const useTheme = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'); 
 
   const toggleTheme = () => {

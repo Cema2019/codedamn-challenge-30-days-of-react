@@ -10,7 +10,7 @@ import MultiplicationTable from "../components/MultiplicationTable";
 import HoverCounter from "../components/HoverCounter";
 import ToggleSwitch from "../components/ToggleSwitch";
 import DaysUntilElement from "../components/DaysUntilElement";
-
+import UseTheme from "../components/UseTheme";
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },
@@ -24,5 +24,6 @@ export const routeConfig = [
   { path: "/hover-counter", element: <HoverCounter />, label: "Day 8"  },
   { path: "/toggle-switch", element: <ToggleSwitch />, label: "Day 9"  },
   { path: "/days-until-element", element: <DaysUntilElement />, label: "Day 10"  },
+  { path: "/use-theme", element: <UseTheme />, label: "Day 11"  },
 ];
 

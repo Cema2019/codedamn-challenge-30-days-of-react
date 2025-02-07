@@ -13,6 +13,8 @@ import DaysUntilElement from "../components/DaysUntilElement";
 import UseTheme from "../components/UseTheme";
 import ParagraphToggling from "../components/ParagraphToggling";
 import TipCalculator from "../components/TipCalculator";
+import BasicPolling from "../components/BasicPolling";
+
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },
@@ -29,5 +31,6 @@ export const routeConfig = [
   { path: "/use-theme", element: <UseTheme />, label: "Day 11"  },
   { path: "/paragraph-toggling", element: <ParagraphToggling />, label: "Day 12"  },
   { path: "/tip-calculator", element: <TipCalculator />, label: "Day 13"  },
+  { path: "/basic-polling", element: <BasicPolling />, label: "Day 14"  },
 ];
 

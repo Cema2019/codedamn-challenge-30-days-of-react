@@ -11,6 +11,7 @@ import HoverCounter from "../components/HoverCounter";
 import ToggleSwitch from "../components/ToggleSwitch";
 import DaysUntilElement from "../components/DaysUntilElement";
 import UseTheme from "../components/UseTheme";
+import ParagraphToggling from "../components/ParagraphToggling";
 
 export const routeConfig = [
   { path: "/", element: <HomePage />, label: "Home"  },
@@ -25,5 +26,6 @@ export const routeConfig = [
   { path: "/toggle-switch", element: <ToggleSwitch />, label: "Day 9"  },
   { path: "/days-until-element", element: <DaysUntilElement />, label: "Day 10"  },
   { path: "/use-theme", element: <UseTheme />, label: "Day 11"  },
+  { path: "/paragraph-toggling", element: <ParagraphToggling />, label: "Day 12"  },
 ];
 

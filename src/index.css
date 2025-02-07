@@ -20,3 +20,8 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  opacity: 1;
+}

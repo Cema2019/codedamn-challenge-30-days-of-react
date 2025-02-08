@@ -12,12 +12,17 @@ import { routeConfig } from "../routes/routeConfig";
 const App: React.FC = () => {
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
-  
+
   return (
     <Router>
       <CssBaseline />
-      <Box sx={{ display: "flex" }}>
-
+      <Box
+        sx={{
+          display: 'flex',
+          minHeight: '100vh',
+          backgroundColor: 'lightgray',
+        }}
+      >
         <Navigation drawerWidth={120} />
 
         <Box
@@ -25,7 +30,7 @@ const App: React.FC = () => {
           sx={{
             flexGrow: 1,
             p: 3,
-            mt: isSmallScreen ? "48px" : 0,
+            mt: isSmallScreen ? '48px' : 0,
           }}
         >
           <Typography variant="h4" align="center" gutterBottom>

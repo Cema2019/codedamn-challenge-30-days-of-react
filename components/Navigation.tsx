@@ -55,6 +55,7 @@ const Navigation: React.FC<NavigationProps> = ({ drawerWidth }) => {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
+            backgroundColor: 'lightgray',
           },
         }}
       >

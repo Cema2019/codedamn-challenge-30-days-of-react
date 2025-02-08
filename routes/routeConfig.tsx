@@ -14,6 +14,7 @@ import ParagraphToggling from '../components/ParagraphToggling';
 import TipCalculator from '../components/TipCalculator';
 import BasicPolling from '../components/BasicPolling';
 import InterestCalculator from '../components/InterestCalculator';
+import SimpleClock from '../components/SimpleClock';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -48,4 +49,5 @@ export const routeConfig = [
     element: <InterestCalculator />,
     label: 'Day 15',
   },
+  { path: '/simple-clock', element: <SimpleClock />, label: 'Day 16' },
 ];

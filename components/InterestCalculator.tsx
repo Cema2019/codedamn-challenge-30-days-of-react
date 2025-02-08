@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Box, TextField, Typography, Paper } from '@mui/material';
 
 const App: React.FC = () => {
-  const [principal, setPrincipal] = useState<number>(1000);
-  const [rate, setRate] = useState<number>(7);
-  const [time, setTime] = useState<number>(5);
+  const [principal, setPrincipal] = useState<number>(0);
+  const [rate, setRate] = useState<number>(0);
+  const [time, setTime] = useState<number>(0);
   const [simpleInterest, setSimpleInterest] = useState<string>('0');
   const [totalAmount, setTotalAmount] = useState<string>('0');
 

@@ -5,31 +5,43 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { CssBaseline, Container, Typography } from "@mui/material";
+import { CssBaseline, Box, Typography, useMediaQuery } from "@mui/material";
 import Navigation from "../components/Navigation";
 import { routeConfig } from "../routes/routeConfig";
 
 const App: React.FC = () => {
+
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  
   return (
     <Router>
       <CssBaseline />
-      <Container maxWidth="md">
-        <Typography variant="h4" align="center" gutterBottom>
-          30 days of React
-        </Typography>
+      <Box sx={{ display: "flex" }}>
 
-        <Navigation />
+        <Navigation drawerWidth={120} />
 
-        <Routes>
-          {routeConfig.map(({ path, element }, index) => (
-            <Route key={index} path={path} element={element} />
-          ))}
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Container>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            mt: isSmallScreen ? "48px" : 0,
+          }}
+        >
+          <Typography variant="h4" align="center" gutterBottom>
+            30 Days of React
+          </Typography>
+
+          <Routes>
+            {routeConfig.map(({ path, element }, index) => (
+              <Route key={index} path={path} element={element} />
+            ))}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Box>
+      </Box>
     </Router>
   );
 };
 
 export default App;
-

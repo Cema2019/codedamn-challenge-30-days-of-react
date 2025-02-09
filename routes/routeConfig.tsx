@@ -17,6 +17,7 @@ import InterestCalculator from '../components/InterestCalculator';
 import SimpleClock from '../components/SimpleClock';
 import SignUpForm from '../components/SignUpForm';
 import ClickMe from '../components/ClickMe';
+import ColorPalletGenerator from '../components/ColorPalletGenerator';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -54,4 +55,9 @@ export const routeConfig = [
   { path: '/simple-clock', element: <SimpleClock />, label: 'Day 16' },
   { path: '/sign-up-form', element: <SignUpForm />, label: 'Day 17' },
   { path: '/click-me', element: <ClickMe />, label: 'Day 18' },
+  {
+    path: '/color-pallete',
+    element: <ColorPalletGenerator />,
+    label: 'Day 19',
+  },
 ];

@@ -20,6 +20,7 @@ import ClickMe from '../components/ClickMe';
 import ColorPalletGenerator from '../components/ColorPalletGenerator';
 import DistanceConverter from '../components/DistanceConverter';
 import FaqComponent from '../components/FaqComponent';
+import CorrectAnswers from '../components/correct-answers/CorrectAnswers';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -71,5 +72,10 @@ export const routeConfig = [
     path: '/faq-component',
     element: <FaqComponent />,
     label: 'Day 21',
+  },
+  {
+    path: '/correct-answers',
+    element: <CorrectAnswers />,
+    label: 'Day 22',
   },
 ];

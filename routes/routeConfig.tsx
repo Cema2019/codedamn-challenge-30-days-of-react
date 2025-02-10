@@ -19,6 +19,7 @@ import SignUpForm from '../components/SignUpForm';
 import ClickMe from '../components/ClickMe';
 import ColorPalletGenerator from '../components/ColorPalletGenerator';
 import DistanceConverter from '../components/DistanceConverter';
+import FaqComponent from '../components/FaqComponent';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -65,5 +66,10 @@ export const routeConfig = [
     path: '/distance-converter',
     element: <DistanceConverter />,
     label: 'Day 20',
+  },
+  {
+    path: '/faq-component',
+    element: <FaqComponent />,
+    label: 'Day 21',
   },
 ];

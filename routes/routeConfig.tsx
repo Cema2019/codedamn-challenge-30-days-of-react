@@ -18,6 +18,7 @@ import SimpleClock from '../components/SimpleClock';
 import SignUpForm from '../components/SignUpForm';
 import ClickMe from '../components/ClickMe';
 import ColorPalletGenerator from '../components/ColorPalletGenerator';
+import DistanceConverter from '../components/DistanceConverter';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -59,5 +60,10 @@ export const routeConfig = [
     path: '/color-pallete',
     element: <ColorPalletGenerator />,
     label: 'Day 19',
+  },
+  {
+    path: '/distance-converter',
+    element: <DistanceConverter />,
+    label: 'Day 20',
   },
 ];

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Typography, Grid, Paper } from '@mui/material';
 
 const generateRandomColor = (): string => {

@@ -22,6 +22,7 @@ import DistanceConverter from '../components/DistanceConverter';
 import FaqComponent from '../components/FaqComponent';
 import CorrectAnswers from '../components/correct-answers/CorrectAnswers';
 import SimpleTimer from '../components/SimpleTimer';
+import StateMismatch from '../components/StateMismatch';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -83,5 +84,10 @@ export const routeConfig = [
     path: '/simple-timer',
     element: <SimpleTimer />,
     label: 'Day 23',
+  },
+  {
+    path: '/state-mismatch',
+    element: <StateMismatch />,
+    label: 'Day 24',
   },
 ];

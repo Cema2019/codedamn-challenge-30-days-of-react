@@ -21,6 +21,7 @@ import ColorPalletGenerator from '../components/ColorPalletGenerator';
 import DistanceConverter from '../components/DistanceConverter';
 import FaqComponent from '../components/FaqComponent';
 import CorrectAnswers from '../components/correct-answers/CorrectAnswers';
+import SimpleTimer from '../components/SimpleTimer';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -77,5 +78,10 @@ export const routeConfig = [
     path: '/correct-answers',
     element: <CorrectAnswers />,
     label: 'Day 22',
+  },
+  {
+    path: '/simple-timer',
+    element: <SimpleTimer />,
+    label: 'Day 23',
   },
 ];

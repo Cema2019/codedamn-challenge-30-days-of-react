@@ -24,6 +24,8 @@ import CorrectAnswers from '../components/correct-answers/CorrectAnswers';
 import SimpleTimer from '../components/SimpleTimer';
 import StateMismatch from '../components/StateMismatch';
 import RatingComponent from '../components/RatingComponent';
+import CharacterCounter from '../components/CharacterCounter';
+
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -95,5 +97,10 @@ export const routeConfig = [
     path: '/rating-component',
     element: <RatingComponent />,
     label: 'Day 25',
+  },
+  {
+    path: '/character-counter',
+    element: <CharacterCounter />,
+    label: 'Day 26',
   },
 ];

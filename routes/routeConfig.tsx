@@ -25,7 +25,8 @@ import SimpleTimer from '../components/SimpleTimer';
 import StateMismatch from '../components/StateMismatch';
 import RatingComponent from '../components/RatingComponent';
 import CharacterCounter from '../components/CharacterCounter';
-
+import Checkboxes from '../components/Checkboxes';
+import LocalStorage from '../components/LocalStorage';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -102,5 +103,15 @@ export const routeConfig = [
     path: '/character-counter',
     element: <CharacterCounter />,
     label: 'Day 26',
+  },
+  {
+    path: '/Checkboxes',
+    element: <Checkboxes />,
+    label: 'Day 27',
+  },
+  {
+    path: '/local-storage',
+    element: <LocalStorage />,
+    label: 'Day 28',
   },
 ];

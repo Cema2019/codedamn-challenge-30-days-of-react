@@ -23,6 +23,7 @@ import FaqComponent from '../components/FaqComponent';
 import CorrectAnswers from '../components/correct-answers/CorrectAnswers';
 import SimpleTimer from '../components/SimpleTimer';
 import StateMismatch from '../components/StateMismatch';
+import RatingComponent from '../components/RatingComponent';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -89,5 +90,10 @@ export const routeConfig = [
     path: '/state-mismatch',
     element: <StateMismatch />,
     label: 'Day 24',
+  },
+  {
+    path: '/rating-component',
+    element: <RatingComponent />,
+    label: 'Day 25',
   },
 ];

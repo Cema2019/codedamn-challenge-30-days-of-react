@@ -27,6 +27,8 @@ import RatingComponent from '../components/RatingComponent';
 import CharacterCounter from '../components/CharacterCounter';
 import Checkboxes from '../components/Checkboxes';
 import LocalStorage from '../components/LocalStorage';
+import RandomNumberGenerator from '../components/RandomNumberGenerator';
+
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -113,5 +115,10 @@ export const routeConfig = [
     path: '/local-storage',
     element: <LocalStorage />,
     label: 'Day 28',
+  },
+  {
+    path: '/random-number',
+    element: <RandomNumberGenerator />,
+    label: 'Day 29',
   },
 ];

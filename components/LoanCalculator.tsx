@@ -33,8 +33,11 @@ const LoanCalculator: React.FC = () => {
       p={2}
     >
       <Box width="100%" maxWidth="500px">
-        <Typography variant="h4" align="center" gutterBottom>
-          EMI Calculator
+        <Typography variant="h5" align="center" gutterBottom>
+          Equated Monthly Installment
+        </Typography>
+        <Typography variant="h5" align="center" gutterBottom mb={2}>
+          (EMI) Calculator
         </Typography>
         <Card>
           <CardContent>
@@ -44,6 +47,7 @@ const LoanCalculator: React.FC = () => {
                 type="number"
                 value={cost}
                 onChange={(e) => setCost(e.target.value)}
+                inputProps={{ min: 0 }}
                 fullWidth
                 placeholder="Enter total loan amount"
               />
@@ -54,6 +58,7 @@ const LoanCalculator: React.FC = () => {
                 type="number"
                 value={interval}
                 onChange={(e) => setInterval(e.target.value)}
+                inputProps={{ min: 0 }}
                 fullWidth
                 placeholder="Enter number of months"
               />

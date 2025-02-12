@@ -28,7 +28,7 @@ import CharacterCounter from '../components/CharacterCounter';
 import Checkboxes from '../components/Checkboxes';
 import LocalStorage from '../components/LocalStorage';
 import RandomNumberGenerator from '../components/RandomNumberGenerator';
-
+import CurrencyConverter from '../components/CurrencyConverter';
 
 export const routeConfig = [
   { path: '/', element: <HomePage />, label: 'Home' },
@@ -120,5 +120,10 @@ export const routeConfig = [
     path: '/random-number',
     element: <RandomNumberGenerator />,
     label: 'Day 29',
+  },
+  {
+    path: '/currency-converter',
+    element: <CurrencyConverter />,
+    label: 'Day 30',
   },
 ];

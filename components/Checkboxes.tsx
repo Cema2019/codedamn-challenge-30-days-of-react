@@ -50,17 +50,15 @@ const CheckboxList: React.FC = () => {
       }}
     >
       <Box
-        data-testid="checkbox-container"
         sx={{ display: 'flex', flexDirection: 'column', gap: '5px' }}
       >
-        {checkboxes.map((checkbox, index) => (
+        {checkboxes.map((checkbox) => (
           <FormControlLabel
             key={checkbox.id}
             control={
               <Checkbox
                 checked={checkbox.checked}
                 onChange={() => handleCheckboxChange(checkbox.id)}
-                inputProps={{ 'data-testid': `checkbox-${index + 1}` }}
               />
             }
             label={checkbox.label}
@@ -68,7 +66,6 @@ const CheckboxList: React.FC = () => {
         ))}
       </Box>
       <Button
-        data-testid="button"
         onClick={handleSelectAll}
         variant="contained"
         sx={{

@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   const generateRandomNumber = () => {
-    if (!start || !end || start < 0 || end > 1000 || start >= end) {
+    if (start < 0 || end > 1000 || start >= end) {
       setErrorMessage('Invalid Input');
       setRandomNumber(null);
       return;
@@ -64,11 +64,15 @@ const App: React.FC = () => {
         color="primary"
         onClick={generateRandomNumber}
       >
-        Generate
+        Get Random Number
       </Button>
 
       <Typography id="randomNumber" variant="h6">
-        {errorMessage ? errorMessage : `Random Number: ${randomNumber}`}
+        {errorMessage
+          ? errorMessage
+          : randomNumber !== null
+            ? randomNumber
+            : ''}
       </Typography>
     </Container>
   );

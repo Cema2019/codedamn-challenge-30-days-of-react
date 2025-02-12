@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Container, TextField, Typography, Box } from "@mui/material";
 
 export default function App() {

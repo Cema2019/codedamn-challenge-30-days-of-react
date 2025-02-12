@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Questions from './Questions';
 import { Box, Typography, Button, Container } from '@mui/material';
 

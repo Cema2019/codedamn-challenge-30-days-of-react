@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, TextField, Typography, Box, Container } from '@mui/material';
 
 export default function TimerApp() {

@@ -25,7 +25,7 @@ const App: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
+        height: '90%',
         flexDirection: 'column',
         gap: 2,
       }}

@@ -16,7 +16,7 @@ export default function App() {
         justifyContent: 'center',
         textAlign: 'center',
         alignItems: 'center',
-        height: '100vh',
+        height: '90%',
       }}
     >
       <Typography variant="h4" gutterBottom>

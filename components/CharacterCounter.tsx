@@ -11,7 +11,7 @@ export default function App() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
+        height: '90%',
       }}
     >
       <TextField

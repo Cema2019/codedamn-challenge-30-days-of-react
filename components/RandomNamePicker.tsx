@@ -1,5 +1,14 @@
 import React, { useState, useRef } from 'react';
-import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle, Box } from '@mui/material';
+import {
+  TextField,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Box,
+  Typography,
+} from '@mui/material';
 
 const RandomNamePicker: React.FC = () => {
   const [nameList, setNameList] = useState<string[]>([]);
@@ -27,7 +36,14 @@ const RandomNamePicker: React.FC = () => {
   };
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      minHeight='100vh'
+      gap={2}
+    >
       <TextField
         id="nameInput"
         label="Enter Name"
@@ -35,20 +51,27 @@ const RandomNamePicker: React.FC = () => {
         value={currentName}
         onChange={(e) => setCurrentName(e.target.value)}
         onKeyDown={handleKeyPress}
-        fullWidth
+        sx={{ width: '50%', maxWidth: '400px' }}
       />
-      <Box id="nameList">
+      <Box id="nameList" display="flex" flexWrap="wrap" gap={2}>
         {nameList.map((name, index) => (
-          <span key={index} className="name">{name}</span>
+          <Typography key={index} variant="body1">
+            {name}
+          </Typography>
         ))}
       </Box>
-      <Button variant="contained" color="primary" onClick={pickName}>Pick a Name</Button>
-      <Box id="pickedList">
+
+      <Button variant="contained" color="primary" onClick={pickName}>
+        Pick a Name
+      </Button>
+      <Box id="pickedList" display="flex" flexWrap="wrap" gap={2}>
         {pickedNames.map((name, index) => (
-          <span key={index} className="name">{name}</span>
+          <Typography key={index} variant="body1" className="name">
+            {name}
+          </Typography>
         ))}
       </Box>
-      
+
       {/* Dialog for showing the picked name */}
       <Dialog open={showDialog} onClose={() => setShowDialog(false)}>
         <DialogTitle>Picked Name</DialogTitle>
@@ -56,7 +79,9 @@ const RandomNamePicker: React.FC = () => {
           <p>{pickedNameRef.current}</p>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setShowDialog(false)} color="primary">Close</Button>
+          <Button onClick={() => setShowDialog(false)} color="primary">
+            Close
+          </Button>
         </DialogActions>
       </Dialog>
     </Box>

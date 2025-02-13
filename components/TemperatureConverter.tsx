@@ -3,22 +3,33 @@ import { TextField, Box } from '@mui/material';
 
 const TemperatureConverter: React.FC = () => {
   const [celsius, setCelsius] = useState<number>(0);
-  const [fahrenheit, setFahrenheit] = useState<number>((celsius * 9/5) + 32);
+  const [fahrenheit, setFahrenheit] = useState<number>((celsius * 9) / 5 + 32);
 
   const handleCelsiusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newCelsius = parseFloat(e.target.value);
     setCelsius(newCelsius);
-    setFahrenheit((newCelsius * 9/5) + 32);
+    setFahrenheit((newCelsius * 9) / 5 + 32);
   };
 
   const handleFahrenheitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newFahrenheit = parseFloat(e.target.value);
     setFahrenheit(newFahrenheit);
-    setCelsius((newFahrenheit - 32) * 5/9);
+    setCelsius(((newFahrenheit - 32) * 5) / 9);
   };
 
   return (
-    <Box display="flex" flexDirection="column" gap={2} width={300}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2,
+        width: 300,
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '90%',
+        margin: 'auto',
+      }}
+    >
       <TextField
         id="celsius"
         label="Celsius"

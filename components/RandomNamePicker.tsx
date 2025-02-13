@@ -17,10 +17,16 @@ const RandomNamePicker: React.FC = () => {
   const [showDialog, setShowDialog] = useState<boolean>(false);
   const pickedNameRef = useRef<string>('');
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' && currentName.trim() !== '') {
+  const handleAddName = (event?: React.KeyboardEvent<HTMLDivElement>) => {
+    // If the event is a keyboard event and the key is not "Enter", do nothing
+    if (event && event.key !== 'Enter') {
+      return;
+    }
+
+    // Add the name to the list if it's not empty
+    if (currentName.trim() !== '') {
       setNameList((prev) => [...prev, currentName]);
-      setCurrentName('');
+      setCurrentName(''); // Clear the input field
     }
   };
 
@@ -41,18 +47,26 @@ const RandomNamePicker: React.FC = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      minHeight='100vh'
+      minHeight="90%"
       gap={2}
     >
-      <TextField
-        id="nameInput"
-        label="Enter Name"
-        variant="outlined"
-        value={currentName}
-        onChange={(e) => setCurrentName(e.target.value)}
-        onKeyDown={handleKeyPress}
-        sx={{ width: '50%', maxWidth: '400px' }}
-      />
+      <Box display="flex" flexDirection="row" gap={2} alignItems="center">
+        <TextField
+          id="nameInput"
+          label="Enter Name"
+          variant="outlined"
+          value={currentName}
+          onChange={(e) => setCurrentName(e.target.value)}
+          onKeyDown={handleAddName}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => handleAddName()}
+        >
+          Add Name
+        </Button>
+      </Box>
       <Box id="nameList" display="flex" flexWrap="wrap" gap={2}>
         {nameList.map((name, index) => (
           <Typography key={index} variant="body1">

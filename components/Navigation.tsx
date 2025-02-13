@@ -9,7 +9,7 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { routeConfig } from '../routes/routeConfig';
 
 interface NavigationProps {
@@ -19,6 +19,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ drawerWidth }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const location = useLocation();
 
   const toggleDrawer = (open: boolean) => () => {
     setIsDrawerOpen(open);
@@ -67,12 +68,14 @@ const Navigation: React.FC<NavigationProps> = ({ drawerWidth }) => {
               to={path}
               onClick={isSmallScreen ? toggleDrawer(false) : undefined}
               sx={{
-                color: 'inherit',
                 textDecoration: 'none',
                 '&:hover': {
                   backgroundColor: 'primary.light',
                   color: 'primary.main',
                 },
+                backgroundColor:
+                  location.pathname === path ? 'primary.main' : 'transparent',
+                color: location.pathname === path ? 'white' : 'inherit',
               }}
             >
               <ListItemText primary={label} />

@@ -9,7 +9,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <Box textAlign="center" p={3}>
+    <Box textAlign="center" p={3} minHeight="90%"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+>
       <Button
         data-testid="button"
         variant="contained"

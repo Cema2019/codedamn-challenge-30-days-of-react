@@ -66,7 +66,7 @@ const TabsComponent = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100vh',
+        minHeight: '90%',
         margin: 'auto',
       }}
     >

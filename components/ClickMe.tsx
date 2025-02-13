@@ -11,7 +11,7 @@ const App: React.FC = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height="100%"
+      height="90%"
     >
       <Button
         data-testid="button"

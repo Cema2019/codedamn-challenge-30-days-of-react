@@ -59,7 +59,7 @@ const App: React.FC = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
+        height: '90%',
         backgroundColor: 'lightgray',
         padding: 2,
       }}

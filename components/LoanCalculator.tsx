@@ -29,7 +29,7 @@ const LoanCalculator: React.FC = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      minHeight="100vh"
+      minHeight="90%"
       p={2}
     >
       <Box width="100%" maxWidth="500px">

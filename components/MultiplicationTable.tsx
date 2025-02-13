@@ -1,4 +1,4 @@
-import React, { useState, KeyboardEvent, ChangeEvent } from "react";
+import React, { useState, KeyboardEvent, ChangeEvent } from 'react';
 import {
   Container,
   TextField,
@@ -8,10 +8,10 @@ import {
   Typography,
   Paper,
   Box,
-} from "@mui/material";
+} from '@mui/material';
 
 const App: React.FC = () => {
-  const [number, setNumber] = useState<string>("");
+  const [number, setNumber] = useState<string>('');
   const [table, setTable] = useState<string[]>([]);
 
   const handleGenerateTable = () => {
@@ -23,7 +23,7 @@ const App: React.FC = () => {
       }
       setTable(newTable);
     } else {
-      alert("Please enter a number between 0 and 1000.");
+      alert('Please enter a number between 0 and 1000.');
     }
   };
 
@@ -33,38 +33,68 @@ const App: React.FC = () => {
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handleGenerateTable();
     }
   };
 
   return (
     <Container sx={{ padding: 2 }}>
-      <Typography variant="h4" gutterBottom>
-        Multiplication Table Generator
-      </Typography>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
-        <TextField
-          type="number"
-          label="Enter a number"
-          variant="outlined"
-          value={number}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-        <Button variant="contained" color="primary" onClick={handleGenerateTable}>
-          Generate Table
-        </Button>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          Multiplication Table Generator
+        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+          <TextField
+            type="number"
+            label="Enter a number"
+            variant="outlined"
+            value={number}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleGenerateTable}
+          >
+            Generate Table
+          </Button>
+        </Box>
       </Box>
       {number && table.length > 0 && (
-        <Paper elevation={3} sx={{ padding: 2 }}>
-          <List>
-            {table.map((item, index) => (
-              <ListItem key={index}>
-                <Typography>{item}</Typography>
-              </ListItem>
-            ))}
-          </List>
+        <Paper
+          elevation={3}
+          sx={{ padding: 2, width: { xs: '100%', sm: '40%' }, margin: 'auto' }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <List>
+              {table.slice(0, 10).map((item, index) => (
+                <ListItem key={index}>
+                  <Typography>{item}</Typography>
+                </ListItem>
+              ))}
+            </List>
+            <List>
+              {table.slice(10, 20).map((item, index) => (
+                <ListItem key={index}>
+                  <Typography>{item}</Typography>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Paper>
       )}
     </Container>

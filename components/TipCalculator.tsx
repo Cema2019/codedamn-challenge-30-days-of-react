@@ -24,7 +24,7 @@ const App: React.FC = () => {
   return (
     <Container
       sx={{
-        minHeight: "100vh",
+        minHeight: "90%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

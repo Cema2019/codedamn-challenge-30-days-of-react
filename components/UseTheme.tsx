@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <>
       <Container
         sx={{
-          minHeight: '100vh',
+          minHeight: '90%',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

@@ -1,20 +1,20 @@
-import { Typography, Stack, Link } from "@mui/material";
+import { Typography, Stack, Link } from '@mui/material';
 
 const HomePage = () => {
   return (
     <Stack
       sx={{
-        height: "70vh",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
+        height: '70vh',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
       }}
     >
       <Typography variant="h3" gutterBottom>
         Welcome to 30 Days of React Challenge
       </Typography>
       <Typography variant="h5" paragraph>
-        This is a page where you can find all solutions to the{" "}
+        Here you will find all solutions to the{' '}
         <Link
           href="https://codedamn.com/challenge/30-days-of-react"
           target="_blank"
@@ -22,11 +22,22 @@ const HomePage = () => {
           underline="hover"
         >
           CodeDamn
-        </Link>{" "}
+        </Link>{' '}
         challenges.
       </Typography>
+      <Typography variant="h5" paragraph>
+        You can view the source code in{' '}
+        <Link
+          href="https://github.com/Cema2019/codedamn-challenge-30-days-of-react"
+          target="_blank"
+          rel="noopener noreferrer"
+          underline="hover"
+        >
+          Github
+        </Link>
+      </Typography>
       <Typography variant="h6">
-        Built with TypeScript and styled with MUI.
+        Built with React, TypeScript and styled with MUI.
       </Typography>
     </Stack>
   );
